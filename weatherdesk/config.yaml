@@ -21,6 +21,5 @@ panel_title: WeatherDesk
 host_network: true
 # One directory holds the settings blob and the observation archive — years of it.
 map:
-  - data:rw
-options: {}
-schema: {}
+  - type: data
+    read_only: false
