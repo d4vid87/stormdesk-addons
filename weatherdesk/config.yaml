@@ -1,0 +1,26 @@
+name: WeatherDesk
+version: "3.2.0"
+slug: weatherdesk
+description: A self-hosted dashboard for your own weather station — Tempest, Ecowitt, Ambient, Davis, AcuRite and more.
+url: https://github.com/d4vid87/weatherdesk
+arch:
+  - amd64
+  - aarch64
+init: false
+# The dashboard, framed in the Home Assistant sidebar. The server reads Ingress's own
+# X-Ingress-Path header and hands the page its prefix, so nothing here needs a proxy rule.
+ingress: true
+ingress_port: 8088
+panel_icon: mdi:weather-partly-cloudy
+panel_title: WeatherDesk
+# A Tempest hub broadcasts its readings to 255.255.255.255:50222, and a broadcast does not
+# survive Docker's bridge network. Host networking is what makes a hub work without a token —
+# and it also means port 8088 is reachable from the LAN whatever Ingress does. See DOCS.md;
+# the dashboard's LAN routes assume a trusted network, exactly as they do for every other way
+# of installing it.
+host_network: true
+# One directory holds the settings blob and the observation archive — years of it.
+map:
+  - data:rw
+options: {}
+schema: {}

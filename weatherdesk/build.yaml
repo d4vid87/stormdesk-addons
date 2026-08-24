@@ -1,0 +1,8 @@
+# The add-on is the published multi-architecture image plus a few lines that make it a good
+# citizen inside Home Assistant OS. Building it locally takes a second — there is no compiler
+# here, only a base image and a start script.
+build_from:
+  amd64: ghcr.io/d4vid87/weatherdesk:v3.2.0
+  aarch64: ghcr.io/d4vid87/weatherdesk:v3.2.0
+labels:
+  org.opencontainers.image.source: https://github.com/d4vid87/weatherdesk
