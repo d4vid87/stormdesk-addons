@@ -1,4 +1,4 @@
-# WeatherDesk
+# StormDesk
 
 A self-hosted dashboard for your own weather station — Tempest, Ecowitt, Ambient Weather, Davis
 via WeatherLink Live, AcuRite through rtl_433, La Crosse, and anything that speaks the Weather
@@ -39,9 +39,9 @@ Home Assistant then discovers one device with nineteen entities under it, with n
 custom component.
 
 The full guide, including the blueprints and the entity list, is in
-[the WeatherDesk docs](https://github.com/d4vid87/weatherdesk/blob/main/docs/homeassistant.md).
+[the StormDesk docs](https://github.com/d4vid87/stormdesk/blob/main/docs/homeassistant.md).
 
-There is also a [custom integration](https://github.com/d4vid87/ha-weatherdesk) if you would
+There is also a [custom integration](https://github.com/d4vid87/ha-stormdesk) if you would
 rather not run a broker, or if you want a weather entity with a forecast card — MQTT discovery has
 no weather platform.
 
@@ -64,7 +64,7 @@ does not hide it. Anyone on your network who opens `http://<your Home Assistant>
 dashboard, and the dashboard's LAN routes will hand them the settings blob — which includes your
 Tempest API token and any broker password.
 
-This is the same posture as every other way of installing WeatherDesk, and it is deliberate: the
+This is the same posture as every other way of installing StormDesk, and it is deliberate: the
 console on the kitchen wall has no keyboard to log in with. It assumes a LAN you trust. If that is
 not your situation, do not expose this to the internet, and put an authenticating proxy in front
 of it if your LAN is shared.

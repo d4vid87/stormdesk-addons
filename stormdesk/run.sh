@@ -12,4 +12,4 @@ if [ "$(stat -c %u /data)" != "1000" ]; then
 fi
 
 exec setpriv --reuid=1000 --regid=1000 --clear-groups \
-    /usr/local/bin/weatherdesk --headless
+    /usr/local/bin/stormdesk --headless
