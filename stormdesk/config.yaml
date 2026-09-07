@@ -1,8 +1,8 @@
-name: WeatherDesk
-version: "3.2.0"
-slug: weatherdesk
+name: StormDesk
+version: "4.1.0"
+slug: stormdesk
 description: A self-hosted dashboard for your own weather station — Tempest, Ecowitt, Ambient, Davis, AcuRite and more.
-url: https://github.com/d4vid87/weatherdesk
+url: https://github.com/d4vid87/stormdesk
 arch:
   - amd64
   - aarch64
@@ -12,7 +12,7 @@ init: false
 ingress: true
 ingress_port: 8088
 panel_icon: mdi:weather-partly-cloudy
-panel_title: WeatherDesk
+panel_title: StormDesk
 # A Tempest hub broadcasts its readings to 255.255.255.255:50222, and a broadcast does not
 # survive Docker's bridge network. Host networking is what makes a hub work without a token —
 # and it also means port 8088 is reachable from the LAN whatever Ingress does. See DOCS.md;
